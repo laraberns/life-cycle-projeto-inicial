@@ -45,4 +45,8 @@ export class ListaDeCompraService {
     };
     this.listaDeCompra.splice(Number(id) - 1, 1, itemEditado);
   }
+
+  limparLista() {
+    this.listaDeCompra = [];
+  }
 }
