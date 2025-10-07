@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Item } from 'src/app/interfaces/iItem';
 
@@ -26,5 +33,13 @@ export class ItemComponent implements OnInit, OnChanges {
 
   editarItem() {
     this.emitindoItemParaEditar.emit(this.item);
+  }
+
+  checarItem() {
+    if (this.item.comprado == true) {
+      this.item.comprado = false;
+    } else {
+      this.item.comprado = true;
+    }
   }
 }
