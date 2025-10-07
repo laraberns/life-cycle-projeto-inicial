@@ -1,27 +1,68 @@
-# LifeCycle
+# 🛒 Projeto Lista de Compras - Ciclo de Vida no Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Este projeto foi desenvolvido com o objetivo de **aprender e aplicar o ciclo de vida dos componentes no Angular**, explorando seus principais *lifecycle hooks* e sua importância na criação de **aplicações mais rápidas, organizadas e performáticas**.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 🚀 Objetivo do Projeto
 
-## Code scaffolding
+Criar uma **lista de compras interativa**, utilizando um **formulário simples** para adicionar, editar e remover itens, enquanto exploramos o comportamento dos principais hooks do ciclo de vida de um componente Angular.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🧩 Hooks Explorados
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Durante o desenvolvimento, focamos nos seguintes hooks:
 
-## Running unit tests
+- **`ngOnInit()`** → Executado uma vez, logo após a inicialização do componente.  
+  Utilizado para inicializar dados e configurar o estado inicial da aplicação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **`ngOnChanges()`** → Detecta mudanças em propriedades de entrada (`@Input`).  
+  Ideal para reagir a atualizações vindas de componentes pais.
 
-## Running end-to-end tests
+- **`ngDoCheck()`** → Chamado a cada verificação de mudanças.  
+  Usado para criar verificações personalizadas além do *default change detection* do Angular.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **`ngOnDestroy()`** → Executado antes de o componente ser destruído.  
+  Utilizado para limpeza de subscrições, timers e listeners.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🧠 Conceitos Abordados
+
+- Lógica de **inicialização** de componentes.
+- **Verificação de propriedades de entrada** e reatividade.
+- **Monitoramento de alterações** internas do componente.
+- **Lógica de limpeza** ao destruir o componente.
+- Boas práticas para **melhorar o desempenho** e evitar vazamentos de memória.
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- **Angular** (versão utilizada no aprendizado)
+- **TypeScript**
+- **HTML5 / CSS3**
+- **FontAwesome** (ícones de edição e exclusão)
+- **Componentização e Data Binding** do Angular
+
+---
+
+## 📝 Funcionalidades
+
+- Adicionar novos itens à lista.  
+- Editar e excluir itens.  
+- Marcar itens como concluídos.  
+- Exibir a data e hora de inclusão.  
+- Limpar toda a lista com um clique.  
+
+---
+
+## 💡 Aprendizados
+
+Durante o desenvolvimento, foram compreendidos os seguintes pontos:
+
+- O ciclo de vida do Angular **determina como e quando um componente nasce, se atualiza e é destruído**.  
+- Utilizar corretamente os hooks evita **operações desnecessárias**, aumentando a **performance** da aplicação.  
+- O uso de `ngOnDestroy` é essencial para garantir **limpeza de recursos** e evitar **memory leaks**.  
+- O `ngDoCheck` permite **controle granular sobre detecção de mudanças**, quando necessário.
